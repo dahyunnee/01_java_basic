@@ -22,6 +22,7 @@ public class LoopEx24_정답 {
 
 	public static void main(String[] args) {
 
+		int line = 10;
 		
 		for (int i = 1; i<=5; ++i) {
 			

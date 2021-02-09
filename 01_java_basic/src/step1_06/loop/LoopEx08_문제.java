@@ -2,6 +2,7 @@ package step1_06.loop;
 
 import java.util.Scanner;
 
+
 /*
  * # ATM[2단계]
  * 
