@@ -3,7 +3,7 @@ package step1_06.loop;
 /*
  * # 2차원 반복문
  * 
- * 1   2  3  4  5
+ * 1   2  3  4  5   -> 빼면 0
  * 10  9  8  7  6   -> 더하면11 11 11 11 11
  * 11 12 13 14 15   -> 빼면 10 10 10 10 10 
  * 20 19 18 17 16   -> 더하면 21 21 21 21 21
@@ -18,11 +18,14 @@ package step1_06.loop;
  */
 
 
+//2021.02.14 16:18~16:23
 public class LoopEx24_정답 {
 
 	public static void main(String[] args) {
 
 		int line = 10;
+		int even = 11;
+		int odd = 0;
 		
 		for (int i = 1; i<=5; ++i) {
 			
@@ -30,10 +33,24 @@ public class LoopEx24_정답 {
 				
 				if (i%2 == 0) {
 					
+					System.out.print(even - j + " ");
+					if (j==5) {
+						System.out.println();
+						even += 10;
+					}
+					
 				}
 				else {
 					
+					System.out.print(odd + j + " ");
+					if (j==5) {
+						System.out.println();
+						odd += 10;
+					}
+					
 				}
+				
+		
 			}
 		}
 		

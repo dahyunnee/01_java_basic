@@ -25,6 +25,36 @@ public class LoopEx26_테스트문제 {
 		System.out.print("Enter Number ? ");
 		int getNumber = scan.nextInt();
 		
+		int sqrtNumber = -1; 
+		
+		
+		for ( int standardNumber = getNumber ; ; standardNumber++ ) {
+			
+			boolean isPrimenumber = true;
+	
+			sqrtNumber = (int)Math.sqrt(standardNumber);
+			
+			for ( int i = 2; i <= sqrtNumber ; ++i) {		//소수인지 확인
+				
+				if (standardNumber % i == 0) { 	//소수 아님 
+					
+					isPrimenumber = false;
+					break;
+				}
+				
+			}
+			
+			
+			if (isPrimenumber == true ) {	//소수인 경우 출력하고 종료
+				
+				System.out.println(standardNumber);
+				break;
+			}
+			
+			
+		}
+		
+		
 		scan.close();
 		
 	}

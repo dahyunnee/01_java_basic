@@ -36,8 +36,33 @@ public class LoopEx27_테스트문제 {
         
 		System.out.print("key값 입력 : ");
 		int key = scan.nextInt();
- 
+		
+		int inputNumber = -1;
+		int countOrder = 1;		//입력된 수들의 순서 저장 변수 
+		int firstAppear = -1;	//첫번째 나타났을때 순서 저장 위한 변수
+		
+		do {
+			
+			System.out.print("입력 : ");
+			inputNumber = scan.nextInt();
+			
+			if ( inputNumber == key ) {		//key값과 일치하는 경우
+				
+				if (firstAppear == -1 ) firstAppear = countOrder;	//처음 등장한 경우에만 firstAppear 값을 
+																	//등장한 순서(countOrder)로 바꿔줌 
+				
+			}
+			
+			countOrder++;		//일치하지 않는 경우를 위해 countOrder을 1 증가시킴 
 
+			
+		}while(inputNumber != -1);
+ 
+		System.out.println();
+		
+		if ( firstAppear != -1) System.out.println("key값 " + key + "는 " + firstAppear +"번째에서 처음으로 나타남.");
+		else System.out.println("not found");
+		
 		scan.close();
 	}
 
